@@ -35,15 +35,15 @@ func _process(delta: float) -> void:
 		if(Global.playerHP <= 0):
 			Global.stopRoll = true
 			await get_tree().create_timer(0.5).timeout
-			get_tree().change_scene_to_file("res://death.tscn")
+			Global.changeScene("res://death.tscn")
 		elif(Global.opponentHP <= 0):
 			Global.stopRoll = true
 			await get_tree().create_timer(0.5).timeout
 			if(Global.level >= 9):
 				Global.level += 1
-				get_tree().change_scene_to_file("res://dialog.tscn")	
+				Global.changeScene("res://dialog.tscn")	
 			else:
-				get_tree().change_scene_to_file("res://shop.tscn")	
+				Global.changeScene("res://shop.tscn")	
 		
 func roll() -> void:
 	get_tree().call_group("player", "hit")

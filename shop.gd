@@ -11,7 +11,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if(Global.shopSelection):
 		#print(Global.shopSelection)
-		get_tree().change_scene_to_file("res://player_faces.tscn")	
+		Global.changeScene("res://player_faces.tscn")	
 		#Global.playerFaces.append(Global.shopSelection)
 		#print(Global.playerFaces)
 		#Global.level += 1
@@ -20,4 +20,4 @@ func _process(delta: float) -> void:
 
 func _on_skip_button_pressed() -> void:
 	Global.level += 1
-	get_tree().change_scene_to_file("res://dialog.tscn")	
+	Global.changeScene("res://dialog.tscn")	

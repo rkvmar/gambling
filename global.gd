@@ -711,3 +711,6 @@ func reset() -> void:
 	stopRoll = false
 	resetting = false
 	get_tree().change_scene_to_file("res://dialog.tscn")
+
+func changeScene(file) -> void:
+	get_tree().change_scene_to_file(file)

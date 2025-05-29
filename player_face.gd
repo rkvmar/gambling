@@ -23,7 +23,7 @@ func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) 
 		Global.shopSelection = null
 		#print(Global.playerFaces)
 		Global.level += 1
-		get_tree().change_scene_to_file("res://dialog.tscn")	
+		Global.changeScene("res://dialog.tscn")	
 
 
 func _on_area_2d_mouse_entered() -> void:

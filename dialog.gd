@@ -18,12 +18,12 @@ func _process(delta: float) -> void:
 func _on_next_button_pressed() -> void:
 	if(stage == len(Global.dialog[Global.level])-1):
 		if Global.level <= 10:
-			get_tree().change_scene_to_file("res://game.tscn")	
+			Global.changeScene("res://game.tscn")	
 		#elif Global.level == 11:
 			#Global.level += 1
 			#get_tree().change_scene_to_file("res://dialog.tscn")	
 		else:
-			get_tree().change_scene_to_file("res://win.tscn")	
+			Global.changeScene("res://win.tscn")	
 	else:
 		stage += 1
 		text.text = text.text + "\n" + Global.dialog[Global.level][stage]
