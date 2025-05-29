@@ -512,13 +512,6 @@ var opponents = [
 				"attributes": [{"type": "scoreop", "value": -1, "on": "roll", "chance": 100}]
 			},
 			{
-				"id": 15,
-				"name": "-1 dots",
-				"value": -1,
-				"tooltip": "negative die face",
-				"attributes": []
-			},
-			{
 				"id": 12,
 				"name": "pi",
 				"value": 3,

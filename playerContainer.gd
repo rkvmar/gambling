@@ -8,7 +8,10 @@ signal resetOpponent
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	Global.canRoll = true
+	Global.stopRoll = false
+	Global.playerStand = false
+	Global.isRolling = false
 func _input(event) -> void:
 	if event.is_action_pressed("roll"):
 		if(Global.canRoll):
@@ -16,6 +19,15 @@ func _input(event) -> void:
 	if event.is_action_pressed("stand"):
 		if(Global.canStand):
 			stand()
+	if event.is_action_pressed("debug"):
+		print(Global.canRoll)
+		print(Global.playerStand)
+		print(Global.stopRoll)
+		#get_tree().reload_current_scene()
+		Global.canRoll = true
+	#if event.is_action_pressed("debug2"):
+		#get_tree().reload_current_scene()
+		
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

@@ -12,3 +12,7 @@ func _process(delta: float) -> void:
 		disabled = false
 	else:
 		disabled = true
+
+func _input(event: InputEvent) -> void:
+	if(event.is_action_pressed("debug")):
+		disabled = false
