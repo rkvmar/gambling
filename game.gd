@@ -13,7 +13,7 @@ func _ready() -> void:
 	Global.playerCurrent = Global.playerFaces
 	Global.opponentCurrent = Global.opponents[Global.level]["faces"]
 	Global.standValue = Global.opponents[Global.level]["stand"]
-	Global.playerHP += 5
+	Global.playerHP += 10
 	if(Global.level == 10):
 		Global.playerHP = 100
 	if(Global.opponents[Global.level]["name"] == "Your Biggest Fan"):
