@@ -1,0 +1,59 @@
+[gd_scene load_steps=9 format=3 uid="uid://cvad0ckf1hxiw"]
+
+[ext_resource type="FontFile" uid="uid://rkk1ddmpcavn" path="res://Micro5-Regular.ttf" id="1_153i3"]
+[ext_resource type="Script" path="res://shop.gd" id="1_xcgf1"]
+[ext_resource type="PackedScene" uid="uid://hge8wysldfko" path="res://shopItem.tscn" id="2_af7ee"]
+[ext_resource type="Texture2D" uid="uid://d01nlhmqf83fb" path="res://gamebackground.png" id="2_g7pla"]
+[ext_resource type="Texture2D" uid="uid://bllvmby5h6o7s" path="res://buttons/skiplight.png" id="5_2dxlw"]
+[ext_resource type="Texture2D" uid="uid://dy1mp647gro2w" path="res://buttons/skipdown1.png" id="6_hac0w"]
+[ext_resource type="Texture2D" uid="uid://cboiux72lj3g5" path="res://buttons/skipdark.png" id="7_wwxsh"]
+[ext_resource type="Texture2D" uid="uid://dmmlrg4rhjdsy" path="res://buttons/skipdown2.png" id="8_fiucv"]
+
+[node name="shop" type="Node2D"]
+script = ExtResource("1_xcgf1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.687272, 0.354214, 1, 1)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_g7pla")
+
+[node name="shopItem1" parent="." instance=ExtResource("2_af7ee")]
+position = Vector2(-53, 16)
+
+[node name="shopItem2" parent="." instance=ExtResource("2_af7ee")]
+position = Vector2(0, 16)
+
+[node name="shopItem3" parent="." instance=ExtResource("2_af7ee")]
+position = Vector2(53, 16)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(5, 5)
+
+[node name="Text" type="RichTextLabel" parent="."]
+offset_left = -114.0
+offset_top = 45.0
+offset_right = 1146.0
+offset_bottom = 149.0
+scale = Vector2(0.15, 0.15)
+theme_override_fonts/normal_font = ExtResource("1_153i3")
+theme_override_font_sizes/normal_font_size = 100
+text = "choose a face to add to your collection"
+
+[node name="SkipButton" type="TextureButton" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 80.0
+offset_top = 45.0
+offset_right = 112.0
+offset_bottom = 61.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("5_2dxlw")
+texture_pressed = ExtResource("6_hac0w")
+texture_hover = ExtResource("7_wwxsh")
+texture_disabled = ExtResource("8_fiucv")
+
+[connection signal="pressed" from="SkipButton" to="." method="_on_skip_button_pressed"]

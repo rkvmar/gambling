@@ -1,0 +1,63 @@
+[gd_scene load_steps=9 format=3 uid="uid://5tsdqiq0b1ti"]
+
+[ext_resource type="FontFile" uid="uid://rkk1ddmpcavn" path="res://Micro5-Regular.ttf" id="1_j4ghe"]
+[ext_resource type="Texture2D" uid="uid://d01nlhmqf83fb" path="res://gamebackground.png" id="2_gtob8"]
+[ext_resource type="PackedScene" uid="uid://cctimdddrsonx" path="res://end_face.tscn" id="3_rpjcr"]
+[ext_resource type="Texture2D" uid="uid://dynxw8jrrfm35" path="res://buttons/retrylight.png" id="4_cl7ko"]
+[ext_resource type="Texture2D" uid="uid://2hj8vrtxikc0" path="res://buttons/retrydown1.png" id="5_0kef1"]
+[ext_resource type="Texture2D" uid="uid://bpn1hamcrjq3o" path="res://buttons/retrydark.png" id="6_i4chl"]
+[ext_resource type="Texture2D" uid="uid://sky4umx4pelg" path="res://buttons/retrydown2.png" id="7_e8e70"]
+[ext_resource type="Script" path="res://retry.gd" id="8_ai4be"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.974824, 0.245086, 0.222169, 1)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_gtob8")
+
+[node name="Text" type="RichTextLabel" parent="."]
+offset_left = -144.0
+offset_top = -65.0
+offset_right = 432.0
+offset_bottom = 39.0
+scale = Vector2(0.5, 0.5)
+theme_override_fonts/normal_font = ExtResource("1_j4ghe")
+theme_override_font_sizes/normal_font_size = 100
+bbcode_enabled = true
+text = "[center]you DIEd :c"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(5, 5)
+
+[node name="endFace1" parent="." instance=ExtResource("3_rpjcr")]
+position = Vector2(-85, 0)
+
+[node name="endFace2" parent="." instance=ExtResource("3_rpjcr")]
+position = Vector2(-51, 0)
+
+[node name="endFace3" parent="." instance=ExtResource("3_rpjcr")]
+position = Vector2(-17, 0)
+
+[node name="endFace4" parent="." instance=ExtResource("3_rpjcr")]
+position = Vector2(17, 0)
+
+[node name="endFace5" parent="." instance=ExtResource("3_rpjcr")]
+position = Vector2(51, 0)
+
+[node name="endFace6" parent="." instance=ExtResource("3_rpjcr")]
+position = Vector2(85, 0)
+
+[node name="retry" type="TextureButton" parent="."]
+offset_left = -24.0
+offset_top = 28.0
+offset_right = 8.0
+offset_bottom = 44.0
+scale = Vector2(1.5, 1.5)
+texture_normal = ExtResource("4_cl7ko")
+texture_pressed = ExtResource("5_0kef1")
+texture_hover = ExtResource("6_i4chl")
+texture_disabled = ExtResource("7_e8e70")
+script = ExtResource("8_ai4be")
+
+[connection signal="pressed" from="retry" to="retry" method="_on_pressed"]

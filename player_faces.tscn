@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=3 uid="uid://ciwfhm62iij41"]
+
+[ext_resource type="Script" path="res://player_faces.gd" id="1_ndodw"]
+[ext_resource type="Texture2D" uid="uid://d01nlhmqf83fb" path="res://gamebackground.png" id="2_ft1gd"]
+[ext_resource type="PackedScene" uid="uid://dgfs2egj7na34" path="res://player_face.tscn" id="3_3ffwg"]
+[ext_resource type="FontFile" uid="uid://rkk1ddmpcavn" path="res://Micro5-Regular.ttf" id="4_dpxco"]
+
+[node name="PlayerFaces" type="Node2D"]
+script = ExtResource("1_ndodw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.687272, 0.354214, 1, 1)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_ft1gd")
+
+[node name="playerFace1" parent="." instance=ExtResource("3_3ffwg")]
+position = Vector2(-85, 16)
+
+[node name="playerFace2" parent="." instance=ExtResource("3_3ffwg")]
+position = Vector2(-51, 16)
+
+[node name="playerFace3" parent="." instance=ExtResource("3_3ffwg")]
+position = Vector2(-17, 16)
+
+[node name="playerFace4" parent="." instance=ExtResource("3_3ffwg")]
+position = Vector2(17, 16)
+
+[node name="playerFace5" parent="." instance=ExtResource("3_3ffwg")]
+position = Vector2(51, 16)
+
+[node name="playerFace6" parent="." instance=ExtResource("3_3ffwg")]
+position = Vector2(85, 16)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(5, 5)
+
+[node name="Text" type="RichTextLabel" parent="."]
+offset_left = -94.0
+offset_top = 45.0
+offset_right = 1166.0
+offset_bottom = 149.0
+scale = Vector2(0.15, 0.15)
+theme_override_fonts/normal_font = ExtResource("4_dpxco")
+theme_override_font_sizes/normal_font_size = 100
+bbcode_enabled = true
+text = "[center] choose a face to swap out"

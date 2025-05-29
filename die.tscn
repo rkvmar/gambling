@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://eygtrbukt4my"]
+
+[ext_resource type="Script" path="res://die.gd" id="2_g1aon"]
+[ext_resource type="SpriteFrames" uid="uid://c0pvopnm16pxw" path="res://diefaces.tres" id="2_nndak"]
+
+[node name="Die" type="Node2D"]
+script = ExtResource("2_g1aon")
+
+[node name="DieSprite" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
+sprite_frames = ExtResource("2_nndak")
+animation = &"brick"
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+
+[connection signal="mouse_entered" from="Control" to="." method="_on_control_mouse_entered"]
+[connection signal="mouse_exited" from="Control" to="." method="_on_control_mouse_exited"]

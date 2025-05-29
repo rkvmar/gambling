@@ -1,0 +1,51 @@
+[gd_scene load_steps=4 format=3 uid="uid://tfu0x1pikjjj"]
+
+[ext_resource type="Texture2D" uid="uid://dqmn10sceqk15" path="res://tooltip.png" id="1_8v2wb"]
+[ext_resource type="Script" path="res://shop_tooltip.gd" id="1_xvmug"]
+[ext_resource type="FontFile" uid="uid://rkk1ddmpcavn" path="res://Micro5-Regular.ttf" id="2_2elhy"]
+
+[node name="ShopTooltip" type="Node2D"]
+z_index = 999
+position = Vector2(0, -5)
+scale = Vector2(0.75, 0.75)
+script = ExtResource("1_xvmug")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -48)
+scale = Vector2(2, 2)
+texture = ExtResource("1_8v2wb")
+
+[node name="Name" type="RichTextLabel" parent="Sprite2D"]
+offset_left = -14.0
+offset_top = -14.0
+offset_right = 569.0
+offset_bottom = 90.0
+scale = Vector2(0.048, 0.048)
+theme_override_fonts/normal_font = ExtResource("2_2elhy")
+theme_override_font_sizes/normal_font_size = 100
+bbcode_enabled = true
+text = "[center]name"
+
+[node name="Value" type="RichTextLabel" parent="Sprite2D"]
+offset_left = -14.0
+offset_top = -8.0
+offset_right = 569.0
+offset_bottom = 117.0
+scale = Vector2(0.048, 0.048)
+theme_override_fonts/normal_font = ExtResource("2_2elhy")
+theme_override_font_sizes/normal_font_size = 100
+bbcode_enabled = true
+text = "[center]value"
+metadata/_edit_use_anchors_ = true
+
+[node name="Description" type="RichTextLabel" parent="Sprite2D"]
+offset_left = -14.0
+offset_top = -1.0
+offset_right = 569.0
+offset_bottom = 312.0
+scale = Vector2(0.048, 0.048)
+theme_override_fonts/normal_font = ExtResource("2_2elhy")
+theme_override_font_sizes/normal_font_size = 100
+bbcode_enabled = true
+text = "[center]A regular die face"
+metadata/_edit_use_anchors_ = true

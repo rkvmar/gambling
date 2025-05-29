@@ -1,0 +1,42 @@
+[gd_scene load_steps=8 format=3 uid="uid://h6jr8fy8oq2n"]
+
+[ext_resource type="Texture2D" uid="uid://cux5kscrrhj8d" path="res://dialogbackground.png" id="1_bnmyx"]
+[ext_resource type="Script" path="res://dialog.gd" id="1_tlthp"]
+[ext_resource type="FontFile" uid="uid://rkk1ddmpcavn" path="res://Micro5-Regular.ttf" id="2_3lq7k"]
+[ext_resource type="Texture2D" uid="uid://cql3menxih65s" path="res://buttons/nextlight.png" id="3_s5jad"]
+[ext_resource type="Texture2D" uid="uid://lt8hef7kfd6j" path="res://buttons/nextdown1.png" id="4_7oayy"]
+[ext_resource type="Texture2D" uid="uid://ba7jvx0cwcex0" path="res://buttons/nextdark.png" id="5_4vw6d"]
+[ext_resource type="Texture2D" uid="uid://cswytp67xu6yo" path="res://buttons/nextdown2.png" id="6_euyfh"]
+
+[node name="dialog" type="Node2D"]
+script = ExtResource("1_tlthp")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(4, 4)
+texture = ExtResource("1_bnmyx")
+
+[node name="Text" type="RichTextLabel" parent="."]
+offset_left = -552.0
+offset_top = -300.0
+offset_right = 925.0
+offset_bottom = 500.0
+scale = Vector2(0.75, 0.75)
+theme_override_fonts/normal_font = ExtResource("2_3lq7k")
+theme_override_font_sizes/normal_font_size = 100
+bbcode_enabled = true
+text = "you> play game?"
+
+[node name="NextButton" type="TextureButton" parent="."]
+offset_left = -96.0
+offset_top = 196.0
+offset_right = -64.0
+offset_bottom = 212.0
+scale = Vector2(6, 6)
+texture_normal = ExtResource("3_s5jad")
+texture_pressed = ExtResource("4_7oayy")
+texture_hover = ExtResource("5_4vw6d")
+texture_disabled = ExtResource("6_euyfh")
+
+[connection signal="pressed" from="NextButton" to="." method="_on_next_button_pressed"]

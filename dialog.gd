@@ -1,0 +1,29 @@
+extends Node2D
+@onready var text: RichTextLabel = $Text
+@onready var next_button: TextureButton = $NextButton
+var stage = 0
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	stage = 0
+	print(Global.level)
+	text.text = Global.dialog[Global.level][stage]
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+
+
+func _on_next_button_pressed() -> void:
+	if(stage == len(Global.dialog[Global.level])-1):
+		if Global.level <= 10:
+			get_tree().change_scene_to_file("res://game.tscn")	
+		#elif Global.level == 11:
+			#Global.level += 1
+			#get_tree().change_scene_to_file("res://dialog.tscn")	
+		else:
+			get_tree().change_scene_to_file("res://win.tscn")	
+	else:
+		stage += 1
+		text.text = text.text + "\n" + Global.dialog[Global.level][stage]
