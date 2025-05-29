@@ -703,6 +703,44 @@ func reset() -> void:
 	shopSelection = null
 	stopRoll = false
 	resetting = false
+	playerFaces = [
+	{
+		"name": "1 dot",
+		"value": 1,
+		"tooltip": "standard die face",
+		"attributes": []
+	},
+	{
+		"name": "2 dots",
+		"value": 2,
+		"tooltip": "standard die face",
+		"attributes": []
+	},
+	{
+		"name": "3 dots",
+		"value": 3,
+		"tooltip": "standard die face",
+		"attributes": []
+	},
+	{
+		"name": "4 dots",
+		"value": 4,
+		"tooltip": "standard die face",
+		"attributes": []
+	},
+	{
+		"name": "5 dots",
+		"value": 5,
+		"tooltip": "standard die face",
+		"attributes": []
+	},
+	{
+		"name": "6 dots",
+		"value": 6,
+		"tooltip": "standard die face",
+		"attributes": []
+	},
+]
 	get_tree().change_scene_to_file("res://dialog.tscn")
 
 func changeScene(file) -> void:
