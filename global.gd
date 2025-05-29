@@ -662,7 +662,7 @@ var dialog = [
 		["> you take the elevator up", "> you find yourself in rows of cubicles", "> you see somebody playing a game on their computer", "gambler> wait, who are you?", "gambler> i've never seen you before"],
 		["> someone who looks extremely out of place in the office environment walks up to you","???> you seem to be having a lot of fun. can i play too?"],
 		["> there's nothing of note on this floor", "> you get back in the elevator", "> there's a monkey in the elevator"],
-		["> you go back in the elevator", "> someone walks in after you", "> oh! i've been meaning to meet you for so long!"],
+		["> the elevator door opens", "> someone walks in after you", "> oh! i've been meaning to meet you for so long!"],
 		["> someone taps you on the shoulder", "mathemetician> up for a game?"],
 		["> you turn around and see someone looking extremely menacing", "> it smells strongly of steel", "> it glares at you, two red eyes locking into your soul", "noah> you're late", "noah> ..."],
 		["> you go up to the top floor", "> time for some answers", "ceo> you know i'm not going to let you go, right?", "ceo> i'm too strong! i cannot lose!"],

@@ -60,8 +60,6 @@ func roll() -> void:
 			Global.rollOpponent = true
 		else:
 			Global.isRolling = false
-	if(numDice > 14):
-		Global.playerStand = true
 
 func addDie(value) -> void:
 	Global.isRolling = true

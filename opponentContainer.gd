@@ -15,6 +15,8 @@ func _process(delta: float) -> void:
 		Global.addToOpponent = null
 	if(numDice > 14):
 		Global.opponentStand = true
+	if(numDice < 1):
+		Global.opponentStand = false
 
 
 func _on_player_die_container_roll_opponent() -> void:

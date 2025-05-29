@@ -22,6 +22,10 @@ func _ready() -> void:
 	Global.playerStand = false
 	Global.stopRoll = false
 	Global.resetting = false
+	if(Global.level	== 0):
+		instructions.visible = true
+	else:
+		instructions.visible = false
 	 
 
 
