@@ -12,7 +12,7 @@ script = ExtResource("1_7jn35")
 [node name="DieSprite" type="AnimatedSprite2D" parent="."]
 scale = Vector2(2, 2)
 sprite_frames = ExtResource("2_xt8o2")
-animation = &"heart"
+animation = &"4 mana 7 7"
 
 [node name="Area2D" type="Area2D" parent="DieSprite"]
 scale = Vector2(2, 2)

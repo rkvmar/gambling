@@ -23,6 +23,10 @@ region = Rect2(32, 0, 16, 16)
 atlas = ExtResource("1_nospi")
 region = Rect2(48, 0, 16, 16)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_ci214"]
+atlas = ExtResource("1_nospi")
+region = Rect2(0, 32, 16, 16)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_dpka7"]
 atlas = ExtResource("1_nospi")
 region = Rect2(64, 0, 16, 16)
@@ -66,10 +70,6 @@ region = Rect2(32, 48, 16, 16)
 [sub_resource type="AtlasTexture" id="AtlasTexture_1gkp6"]
 atlas = ExtResource("1_nospi")
 region = Rect2(32, 32, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ci214"]
-atlas = ExtResource("1_nospi")
-region = Rect2(0, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hgruu"]
 atlas = ExtResource("1_nospi")
@@ -167,6 +167,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_ci214")
+}],
+"loop": true,
+"name": &"4 mana 7 7",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_dpka7")
 }],
 "loop": true,
@@ -251,14 +259,6 @@ animations = [{
 }],
 "loop": true,
 "name": &"fire",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ci214")
-}],
-"loop": true,
-"name": &"four mana seven seven",
 "speed": 5.0
 }, {
 "frames": [{
