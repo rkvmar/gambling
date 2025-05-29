@@ -13,7 +13,7 @@ var opponentHP = 100
 var opponentMax = 5
 var addToOpponent = null
 var addToPlayer = null
-var level = 	0 
+var level = 10
 var shopSelection = null
 var stopRoll = false
 var resetting = false
@@ -226,8 +226,8 @@ var allFaces = [
 		"id": 29,
 		"name": "brick",
 		"value": 3,
-		"tooltip": "on roll: deals 1 damage to both players",
-		"attributes": [{"type": "dmg", "value": 1, "on": "roll", "chance": 100},{"type": "dmgpl", "value": 1, "on": "roll", "chance": 100}]
+		"tooltip": "on roll: deals 2 damage to both players",
+		"attributes": [{"type": "dmg", "value": 2, "on": "roll", "chance": 100},{"type": "dmgpl", "value": 2, "on": "roll", "chance": 100}]
 	},
 ]
 
@@ -634,15 +634,15 @@ var opponents = [
 	},
 	{
 		"name" = "Building",
-		"hp" = 300,
-		"stand" = 17,
+		"hp" = 200,
+		"stand" = 18,
 		"faces" = [
 			{
 				"id": 29,
 				"name": "brick",
 				"value": 3,
-				"tooltip": "on roll: deals 1 damage to both players",
-				"attributes": [{"type": "dmg", "value": 1, "on": "roll", "chance": 100},{"type": "dmgpl", "value": 1, "on": "roll", "chance": 100}]
+				"tooltip": "on roll: deals 2 damage to both players",
+				"attributes": [{"type": "dmg", "value": 2, "on": "roll", "chance": 100},{"type": "dmgpl", "value": 2, "on": "roll", "chance": 100}]
 			},
 			{
 				"id": 18,
