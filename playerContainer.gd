@@ -106,9 +106,15 @@ func reset() -> void:
 	if(Global.opponentTotal > 21):
 		Global.opponentTotal = 0
 	if(Global.playerTotal > Global.opponentTotal):
-		Global.opponentHP -= (Global.playerTotal - Global.opponentTotal)
+		if(Global.playerTotal == 21):
+			Global.opponentHP -= (2*(Global.playerTotal - Global.opponentTotal))
+		else:
+			Global.opponentHP -= (Global.playerTotal - Global.opponentTotal)
 	if(Global.opponentTotal > Global.playerTotal):
-		Global.playerHP -= (Global.opponentTotal - Global.playerTotal)
+		if(Global.opponentTotal == 21):
+			Global.opponentHP -= (2*(Global.playerTotal - Global.opponentTotal))
+		else:
+			Global.playerHP -= (Global.opponentTotal - Global.playerTotal)
 	await get_tree().create_timer(0.5).timeout
 	Global.playerTotal = 0
 	Global.opponentTotal = 0
