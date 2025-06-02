@@ -232,63 +232,44 @@ var allFaces = [
 	},
 ]
 
-#var playerFaces = [
-	#{
-		#"name": "1 dot",
-		#"value": 1,
-		#"tooltip": "standard die face",
-		#"attributes": []
-	#},
-	#{
-		#"name": "2 dots",
-		#"value": 2,
-		#"tooltip": "standard die face",
-		#"attributes": []
-	#},
-	#{
-		#"name": "3 dots",
-		#"value": 3,
-		#"tooltip": "standard die face",
-		#"attributes": []
-	#},
-	#{
-		#"name": "4 dots",
-		#"value": 4,
-		#"tooltip": "standard die face",
-		#"attributes": []
-	#},
-	#{
-		#"name": "5 dots",
-		#"value": 5,
-		#"tooltip": "standard die face",
-		#"attributes": []
-	#},
-	#{
-		#"name": "6 dots",
-		#"value": 6,
-		#"tooltip": "standard die face",
-		#"attributes": []
-	#},
-#]
-
 var playerFaces = [
-	{ 
-				"id": 15,
-				"name": "-1 dots",
-				"value": -1,
-				"tooltip": "negative die face",
-				"attributes": []
-			},
+	{
+		"name": "1 dot",
+		"value": 1,
+		"tooltip": "standard die face",
+		"attributes": []
+	},
+	{
+		"name": "2 dots",
+		"value": 2,
+		"tooltip": "standard die face",
+		"attributes": []
+	},
+	{
+		"name": "3 dots",
+		"value": 3,
+		"tooltip": "standard die face",
+		"attributes": []
+	},
+	{
+		"name": "4 dots",
+		"value": 4,
+		"tooltip": "standard die face",
+		"attributes": []
+	},
+	{
+		"name": "5 dots",
+		"value": 5,
+		"tooltip": "standard die face",
+		"attributes": []
+	},
+	{
+		"name": "6 dots",
+		"value": 6,
+		"tooltip": "standard die face",
+		"attributes": []
+	},
 ]
-#var playerFaces = [
-	#{
-				#"id": 24,
-				#"name": "minus",
-				#"value": -2,
-				#"tooltip": "on roll: -1 from your opponent",
-				#"attributes": [{"type": "scoreop", "value": -1, "on": "roll", "chance": 100}]
-			#},
-#]
 var playerCurrent = []
 
 #var opponentFaces = [
