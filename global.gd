@@ -17,6 +17,7 @@ var level = 0
 var shopSelection = null
 var stopRoll = false
 var resetting = false
+var number = 0
 
 var allFaces = [
 	{
@@ -231,43 +232,53 @@ var allFaces = [
 	},
 ]
 
+#var playerFaces = [
+	#{
+		#"name": "1 dot",
+		#"value": 1,
+		#"tooltip": "standard die face",
+		#"attributes": []
+	#},
+	#{
+		#"name": "2 dots",
+		#"value": 2,
+		#"tooltip": "standard die face",
+		#"attributes": []
+	#},
+	#{
+		#"name": "3 dots",
+		#"value": 3,
+		#"tooltip": "standard die face",
+		#"attributes": []
+	#},
+	#{
+		#"name": "4 dots",
+		#"value": 4,
+		#"tooltip": "standard die face",
+		#"attributes": []
+	#},
+	#{
+		#"name": "5 dots",
+		#"value": 5,
+		#"tooltip": "standard die face",
+		#"attributes": []
+	#},
+	#{
+		#"name": "6 dots",
+		#"value": 6,
+		#"tooltip": "standard die face",
+		#"attributes": []
+	#},
+#]
+
 var playerFaces = [
-	{
-		"name": "1 dot",
-		"value": 1,
-		"tooltip": "standard die face",
-		"attributes": []
-	},
-	{
-		"name": "2 dots",
-		"value": 2,
-		"tooltip": "standard die face",
-		"attributes": []
-	},
-	{
-		"name": "3 dots",
-		"value": 3,
-		"tooltip": "standard die face",
-		"attributes": []
-	},
-	{
-		"name": "4 dots",
-		"value": 4,
-		"tooltip": "standard die face",
-		"attributes": []
-	},
-	{
-		"name": "5 dots",
-		"value": 5,
-		"tooltip": "standard die face",
-		"attributes": []
-	},
-	{
-		"name": "6 dots",
-		"value": 6,
-		"tooltip": "standard die face",
-		"attributes": []
-	},
+	{ 
+				"id": 15,
+				"name": "-1 dots",
+				"value": -1,
+				"tooltip": "negative die face",
+				"attributes": []
+			},
 ]
 #var playerFaces = [
 	#{
@@ -676,6 +687,9 @@ func _process(delta: float) -> void:
 		canRoll = false
 	elif(Global.playerTotal >= 21):
 		canRoll = false
+	elif (number >= 20):
+		Global.canRoll = false
+		print('a')
 	else: 
 		canRoll = true
 		
@@ -704,43 +718,43 @@ func reset() -> void:
 	stopRoll = false
 	resetting = false
 	playerFaces = [
-	{
-		"name": "1 dot",
-		"value": 1,
-		"tooltip": "standard die face",
-		"attributes": []
-	},
-	{
-		"name": "2 dots",
-		"value": 2,
-		"tooltip": "standard die face",
-		"attributes": []
-	},
-	{
-		"name": "3 dots",
-		"value": 3,
-		"tooltip": "standard die face",
-		"attributes": []
-	},
-	{
-		"name": "4 dots",
-		"value": 4,
-		"tooltip": "standard die face",
-		"attributes": []
-	},
-	{
-		"name": "5 dots",
-		"value": 5,
-		"tooltip": "standard die face",
-		"attributes": []
-	},
-	{
-		"name": "6 dots",
-		"value": 6,
-		"tooltip": "standard die face",
-		"attributes": []
-	},
-]
+		{
+			"name": "1 dot",
+			"value": 1,
+			"tooltip": "standard die face",
+			"attributes": []
+		},
+		{
+			"name": "2 dots",
+			"value": 2,
+			"tooltip": "standard die face",
+			"attributes": []
+		},
+		{
+			"name": "3 dots",
+			"value": 3,
+			"tooltip": "standard die face",
+			"attributes": []
+		},
+		{
+			"name": "4 dots",
+			"value": 4,
+			"tooltip": "standard die face",
+			"attributes": []
+		},
+		{
+			"name": "5 dots",
+			"value": 5,
+			"tooltip": "standard die face",
+			"attributes": []
+		},
+		{
+			"name": "6 dots",
+			"value": 6,
+			"tooltip": "standard die face",
+			"attributes": []
+		},
+	]
 	get_tree().change_scene_to_file("res://dialog.tscn")
 
 func changeScene(file) -> void:

@@ -56,6 +56,7 @@ func _process(delta: float) -> void:
 				Global.changeScene("res://dialog.tscn")	
 			else:
 				Global.changeScene("res://shop.tscn")	
+		Global.number = numDice
 		
 func roll() -> void:
 	get_tree().call_group("player", "hit")
