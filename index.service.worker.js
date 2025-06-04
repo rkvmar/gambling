@@ -4,7 +4,7 @@
 // Incrementing CACHE_VERSION will kick off the install event and force
 // previously cached resources to be updated from the network.
 /** @type {string} */
-const CACHE_VERSION = '1748975926|57623545';
+const CACHE_VERSION = '1749065138|47017779';
 /** @type {string} */
 const CACHE_PREFIX = 'gambling-sw-cache-';
 const CACHE_NAME = CACHE_PREFIX + CACHE_VERSION;
